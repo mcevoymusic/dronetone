@@ -8,13 +8,19 @@ body {
     box-sizing: border-box;
 }
 
+.piano-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
 .piano-container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
     position: relative;
-    width: 100%;
-    max-width: 840px; /* Ensures the piano container doesn't exceed the max width */
+    transform-origin: top left;
 }
 
 .key {
@@ -27,7 +33,6 @@ body {
     justify-content: center;
     align-items: flex-end;
     position: relative;
-    box-sizing: border-box;
 }
 
 .white-key {
@@ -43,22 +48,35 @@ body {
     z-index: 1;
 }
 
+[data-note="F"] { background-color: #4682B4; } /* Darker blue for F */
+[data-note="E"] { background-color: #85BF73; } /* Color halfway between Eb (#ADFF2F) and new F (#4682B4) */
+
 #reset-button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
 
-@media (max-width: 840px) {
-    .key {
-        width: calc(100% / 14); /* Adjust width to fit within screen */
-        height: calc((100vw / 14) * 3.75); /* Maintain aspect ratio */
+#active-tones {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 800px) {
+    .piano-container {
+        transform: scale(0.8);
     }
-    
-    .black-key {
-        height: calc((100vw / 14) * 2.5); /* Adjust height to maintain aspect ratio */
-        width: calc(100% / 28); /* Adjust width to fit within screen */
-        margin-left: -calc(100% / 56); /* Adjust margin to fit with the white keys */
-        margin-right: -calc(100% / 56); /* Adjust margin to fit with the white keys */
+}
+
+@media (max-width: 600px) {
+    .piano-container {
+        transform: scale(0.6);
+    }
+}
+
+@media (max-width: 400px) {
+    .piano-container {
+        transform: scale(0.4);
     }
 }

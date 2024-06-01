@@ -7,37 +7,40 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="piano-container">
-        <!-- Starting with two black keys -->
-        <div class="key black-key" data-note="Bb" style="background-color: red;"></div>
-        <div class="key white-key" data-note="B" style="background-color: #FF6347;"></div>
-        <!-- First octave -->
-        <div class="key white-key" data-note="C" style="background-color: orange;"></div>
-        <div class="key black-key" data-note="C#" style="background-color: #FFB347;"></div>
-        <div class="key white-key" data-note="D" style="background-color: yellow;"></div>
-        <div class="key black-key" data-note="Eb" style="background-color: #7FFF00;"></div>
-        <div class="key white-key" data-note="E" style="background-color: #85BF73;"></div> <!-- Adjusted color for E -->
-        <div class="key white-key" data-note="F" style="background-color: #4682B4;"></div> <!-- Darker blue for F -->
-        <div class="key black-key" data-note="F#" style="background-color: #00BFFF;"></div>
-        <div class="key white-key" data-note="G" style="background-color: purple;"></div>
-        <div class="key black-key" data-note="G#" style="background-color: #DA70D6;"></div>
-        <div class="key white-key" data-note="A" style="background-color: #FF69B4;"></div> <!-- Brighter pink for A -->
-        <!-- Second octave -->
-        <div class="key black-key" data-note="Bb2" style="background-color: red;"></div>
-        <div class="key white-key" data-note="B2" style="background-color: #FF6347;"></div>
-        <div class="key white-key" data-note="C2" style="background-color: orange;"></div>
-        <div class="key black-key" data-note="C#2" style="background-color: #FFB347;"></div>
-        <div class="key white-key" data-note="D2" style="background-color: yellow;"></div>
-        <div class="key black-key" data-note="Eb2" style="background-color: #7FFF00;"></div>
-        <div class="key white-key" data-note="E2" style="background-color: #85BF73;"></div> <!-- Adjusted color for E2 -->
-        <div class="key white-key" data-note="F2" style="background-color: #4682B4;"></div> <!-- Darker blue for F2 -->
-        <div class="key black-key" data-note="F#2" style="background-color: #00BFFF;"></div>
-        <div class="key white-key" data-note="G2" style="background-color: purple;"></div>
-        <div class="key black-key" data-note="G#2" style="background-color: #DA70D6;"></div>
-        <div class="key white-key" data-note="A2" style="background-color: #FF69B4;"></div> <!-- Brighter pink for A2 -->
-        <div class="key black-key" data-note="Bb3" style="background-color: red;"></div>
+    <div class="piano-wrapper">
+        <div class="piano-container">
+            <!-- Starting with two black keys -->
+            <div class="key black-key" data-note="Bb" style="background-color: red;"></div>
+            <div class="key white-key" data-note="B" style="background-color: #FF6347;"></div>
+            <!-- First octave -->
+            <div class="key white-key" data-note="C" style="background-color: orange;"></div>
+            <div class="key black-key" data-note="C#" style="background-color: #FFB347;"></div>
+            <div class="key white-key" data-note="D" style="background-color: yellow;"></div>
+            <div class="key black-key" data-note="Eb" style="background-color: #7FFF00;"></div>
+            <div class="key white-key" data-note="E" style="background-color: #85BF73;"></div>
+            <div class="key white-key" data-note="F" style="background-color: #4682B4;"></div>
+            <div class="key black-key" data-note="F#" style="background-color: #00BFFF;"></div>
+            <div class="key white-key" data-note="G" style="background-color: purple;"></div>
+            <div class="key black-key" data-note="G#" style="background-color: #DA70D6;"></div>
+            <div class="key white-key" data-note="A" style="background-color: #FF69B4;"></div>
+            <!-- Second octave -->
+            <div class="key black-key" data-note="Bb2" style="background-color: red;"></div>
+            <div class="key white-key" data-note="B2" style="background-color: #FF6347;"></div>
+            <div class="key white-key" data-note="C2" style="background-color: orange;"></div>
+            <div class="key black-key" data-note="C#2" style="background-color: #FFB347;"></div>
+            <div class="key white-key" data-note="D2" style="background-color: yellow;"></div>
+            <div class="key black-key" data-note="Eb2" style="background-color: #7FFF00;"></div>
+            <div class="key white-key" data-note="E2" style="background-color: #85BF73;"></div>
+            <div class="key white-key" data-note="F2" style="background-color: #4682B4;"></div>
+            <div class="key black-key" data-note="F#2" style="background-color: #00BFFF;"></div>
+            <div class="key white-key" data-note="G2" style="background-color: purple;"></div>
+            <div class="key black-key" data-note="G#2" style="background-color: #DA70D6;"></div>
+            <div class="key white-key" data-note="A2" style="background-color: #FF69B4;"></div>
+            <div class="key black-key" data-note="Bb3" style="background-color: red;"></div>
+        </div>
     </div>
     <button id="reset-button">Reset</button>
+    <div id="active-tones">Active Tones: None</div>
     <script src="script.js"></script>
 </body>
 </html>

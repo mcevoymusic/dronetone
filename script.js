@@ -18,11 +18,13 @@ document.querySelectorAll('.key').forEach(key => {
         } else {
             playTone(note);
         }
+        updateActiveTones();
     });
 });
 
 document.getElementById('reset-button').addEventListener('click', () => {
     Object.keys(oscillators).forEach(note => stopTone(note));
+    updateActiveTones();
 });
 
 function playTone(note) {
@@ -79,7 +81,13 @@ function stopTone(note) {
         gainNode.disconnect();
         oscillators[note].convolver.disconnect();
         delete oscillators[note];
+        updateActiveTones();
     }, (release + 0.1) * 1000);
+}
+
+function updateActiveTones() {
+    const activeTones = Object.keys(oscillators).join(', ') || 'None';
+    document.getElementById('active-tones').innerText = `Active Tones: ${activeTones}`;
 }
 
 function createReverbBuffer() {
